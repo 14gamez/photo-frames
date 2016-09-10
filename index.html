@@ -38,12 +38,12 @@
 		</div>
 	</nav>
 	
-	<div class="container">
+	<div class="container editor">
 		<div class="row">
-		  	
+			
 			<div class="col-md-5 col-md-offset-1 col-left">
 				<canvas id="canvas" class="thumbnail" >Xin lỗi, trình duyệt bạn không hỗ trợ.</canvas>
-		 		<img style="display: none;" id="source">
+				<img style="display: none;" id="source">
 
 				<input id="scaleBar" type="range" min="1" max="2" step="0.01"/>
 				<p>Kích thước: <span id="scaleValue">1</span></p>
@@ -61,9 +61,11 @@
 					<span class="description">Chọn frame cho ảnh.</span>
 				</p>
 				
-				<p class="step">
-					<span class="description content">Chỉnh vị trí bằng cách kéo thả ảnh, kéo thanh kích thước để phóng to thu nhỏ.</span>
-				</p>
+				
+					<div class="content step">
+						<span class="description">Chỉnh vị trí bằng cách kéo thả ảnh, kéo thanh kích thước để phóng to thu nhỏ.</span>
+					</div>
+				
 				
 				<p class="step"><a id="downloadBtn" role="button" class="btn btn-line">Tải về</a></p>
 			
@@ -75,13 +77,23 @@
 			<input style="display:none;" type="file" id="frameFile" accept="image/*" onchange="updateFrame()">
 		</form>
 
+	</div>		
+
+	<div class="app-info">
+		<div class="container">
+			<div class="info-panel">
+				<p style="font-size: 32px;">Ứng dụng chỉnh sửa ảnh trên điện thoại</p>
+				<p>Sắp ra mắt</p>
+				<a href="https://www.facebook.com/14gamez/" target="_blank" class="btn btn-line" role="button">Theo dõi</a>
+			</div>
+		</div>
 	</div>
 
 	<div class="footer">
 		<div class="container">	
 			<div class="meta-info">
 				&copy;
-				<a target="_blank" href="https://github.com/14gamez/welcome-k16/tree/gh-pages">source code</a> - 
+				<a target="_blank" href="https://github.com/14gamez/photo-frames/tree/gh-pages">source code</a> - 
 				<a target="_blank" href="https://luuthevinh.me">about</a>
 			</div>
 		</div>

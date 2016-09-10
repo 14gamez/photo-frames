@@ -3,8 +3,15 @@ body {
   color: #111;
   /*background-color: #fdfdfd;*/
   -webkit-text-size-adjust: 100%;
-  background: url("../images/background.jpg");
-  background-size: cover;
+  	background: url("../images/background.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.editor {
+	padding-top: 90px;
 }
 
 #canvas
@@ -55,12 +62,13 @@ body {
 
 .navbar-default {
 	border: none;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0,0,0,0.8);
 	color: #fff;
 	
 }
 	.navbar-brand {
 		color: #fff !important;
+		margin-right: 19px;
 	}
 	
 	.navbar-nav>li>a {
@@ -69,14 +77,17 @@ body {
 	
 	.navbar-nav li:hover {
 		color: #fff !important;
-		background: rgba(0,0,0,0.5);
+		background: rgba(255,255,255,0.5);
 	}
 
 	.navbar {
-		margin-bottom: 40px;
+		width: 100%;
+		position: fixed;
+		z-index: 100;
+		border-radius: 0;
 	}
 	
-.btn-line {
+.btn-line, .btn-line:focus {
 	border-color: #fff;
 	color: #fff;
 	padding: 8px 20px;
@@ -101,7 +112,15 @@ body {
 .content {
 	background: rgba(0,0,0,0.5);
     padding: 8px 20px;
-    margin: 0;
+}
+
+.content span {
+	margin: 0;
+}
+
+
+.footer {
+	margin-top: 0px;
 }
 
 .footer .container {
@@ -122,5 +141,23 @@ body {
 }
 
 .active {
+	background: rgba(255,255,255,0.5);
+}
+
+.app-info {
+	height: 100vh;
+	background: url("../images/mockup.jpg");
+	background-size: cover;
+	margin-top: 20px;
+	position: relative;
+}
+
+.info-panel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 	background: rgba(0,0,0,0.5);
+	padding: 20px 20px;
 }
