@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo Frames - Image Editor Online</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	
+	<link rel="icon" href="fav-icon.png">
+</head>
+<body>
+	
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="container-fluid">
+				
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="http://14gamez.com">Home</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				  <ul class="nav navbar-nav">
+					<li><a href="#" class="active">Photo Frames</a></li>
+					<li><a href="#">Effects</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">...</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<div class="row">
+		  	
+			<div class="col-md-5 col-md-offset-1 col-left">
+				<canvas id="canvas" class="thumbnail" >Xin lỗi, trình duyệt bạn không hỗ trợ.</canvas>
+		 		<img style="display: none;" id="source">
+
+				<input id="scaleBar" type="range" min="1" max="2" step="0.01"/>
+				<p>Kích thước: <span id="scaleValue">1</span></p>
+			</div>
+
+			<div class="col-md-6 col-md-offset-0">
+			
+				<p class="step">
+					<a id="selectImageBtn" class="btn btn-line" onclick="selectFile()" role="button">Chọn ảnh</a>
+					<span class="description">Chọn ảnh nền.</span>
+				</p>
+				
+				<p class="step">
+					<a id="selectFrameBtn" class="btn btn-line" onclick="selectFrame()" role="button">Chọn frame</a>
+					<span class="description">Chọn frame cho ảnh.</span>
+				</p>
+				
+				<p class="step">
+					<span class="description content">Chỉnh vị trí bằng cách kéo thả ảnh, kéo thanh kích thước để phóng to thu nhỏ.</span>
+				</p>
+				
+				<p class="step"><a id="downloadBtn" role="button" class="btn btn-line">Tải về</a></p>
+			
+			</div>
+		</div>
+
+		<form>
+			<input style="display:none;" type="file" id="imageFile" accept="image/*" onchange="updateImage()">
+			<input style="display:none;" type="file" id="frameFile" accept="image/*" onchange="updateFrame()">
+		</form>
+
+	</div>
+
+	<div class="footer">
+		<div class="container">	
+			<div class="meta-info">
+				&copy;
+				<a target="_blank" href="https://github.com/14gamez/welcome-k16/tree/gh-pages">source code</a> - 
+				<a target="_blank" href="https://luuthevinh.me">about</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script src="js/editimage.js"></script>
+
+</body>
+</html>
