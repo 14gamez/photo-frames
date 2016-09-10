@@ -175,7 +175,7 @@ function downloadFile(button, canvasId, filename) {
 };
 
 document.getElementById('downloadBtn').addEventListener('click', function() {
-    downloadFile(this, "canvas", "up_avatar.png");
+    downloadFile(this, "canvas", "final_photo.png");
 }, false);
 
 
